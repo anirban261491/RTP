@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="KSg-Cd-8vw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="4096" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="JYw-vr-fbA">
+            <objects>
+                <viewController id="pEP-x4-97s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YwO-N9-Wxq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ail-Kc-HCW">
+                                <rect key="frame" x="20" y="61" width="335" height="586"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWK-gG-T1Q">
+                                <rect key="frame" x="20" y="20" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EWK-gG-T1Q" firstAttribute="leading" secondItem="Ail-Kc-HCW" secondAttribute="leading" id="F36-ih-aPb"/>
+                            <constraint firstItem="Ail-Kc-HCW" firstAttribute="leading" secondItem="YwO-N9-Wxq" secondAttribute="leading" constant="20" id="HzT-2I-pbq"/>
+                            <constraint firstItem="Ail-Kc-HCW" firstAttribute="top" secondItem="EWK-gG-T1Q" secondAttribute="bottom" constant="20" id="QsU-yF-D2N"/>
+                            <constraint firstItem="EWK-gG-T1Q" firstAttribute="top" secondItem="YwO-N9-Wxq" secondAttribute="top" constant="20" id="Swo-Bs-qsC"/>
+                            <constraint firstAttribute="bottom" secondItem="Ail-Kc-HCW" secondAttribute="bottom" constant="20" id="Z8o-oQ-uVO"/>
+                            <constraint firstItem="EWK-gG-T1Q" firstAttribute="trailing" secondItem="Ail-Kc-HCW" secondAttribute="trailing" id="hJu-V3-mrI"/>
+                            <constraint firstAttribute="trailing" secondItem="Ail-Kc-HCW" secondAttribute="trailing" constant="20" id="ifZ-yN-eU2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8uw-0f-uxp"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="Ail-Kc-HCW" id="Kfc-sk-fMM"/>
+                        <outlet property="serverAddress" destination="EWK-gG-T1Q" id="Q1C-6e-0PO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CXB-nN-vY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-183" y="-144"/>
+        </scene>
+        <!--Encoder Demo View Controller-->
+        <scene sceneID="pRg-de-VLm">
+            <objects>
+                <viewController id="KSg-Cd-8vw" customClass="EncoderDemoViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4fg-Ui-GI8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="way-5D-mJI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="way-5D-mJI" firstAttribute="top" secondItem="4fg-Ui-GI8" secondAttribute="top" id="I9K-7K-U9p"/>
+                            <constraint firstItem="Q7H-Hp-PNS" firstAttribute="bottom" secondItem="way-5D-mJI" secondAttribute="bottom" id="Ue7-a8-1av"/>
+                            <constraint firstItem="Q7H-Hp-PNS" firstAttribute="trailing" secondItem="way-5D-mJI" secondAttribute="trailing" id="qaz-ZO-TQ9"/>
+                            <constraint firstItem="way-5D-mJI" firstAttribute="leading" secondItem="Q7H-Hp-PNS" secondAttribute="leading" id="uNb-KF-1Gh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q7H-Hp-PNS"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="way-5D-mJI" id="Bop-lf-GSu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SMz-29-JdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="-148"/>
+        </scene>
+    </scenes>
+</document>
